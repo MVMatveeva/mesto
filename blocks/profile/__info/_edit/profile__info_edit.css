@@ -1,0 +1,12 @@
+.profile__info_edit{
+    background-image:url("/image/EditButton.svg");
+    width: 24px;
+    height: 24px;
+    background-color: #000;
+    border: 0;
+    cursor: pointer;
+}
+
+.profile__info_edit:hover{
+    opacity: .5;
+}
