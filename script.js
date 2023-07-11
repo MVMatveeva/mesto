@@ -29,8 +29,7 @@ function handleFormSubmit(evt) {
 }
 popupForm.addEventListener('submit', handleFormSubmit)
 
-function buttonLike(evt) {
-  evt.preventDefault();
+function buttonLike() {
   photoLike.classList.toggle('element__like_active');
 }
 photoLike.addEventListener('click',buttonLike)
