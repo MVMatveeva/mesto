@@ -1,5 +1,5 @@
 .profile__info_edit {
-    background-image: url("/image/EditButton.svg");
+    background-image: url("../../../../image/EditButton.svg");
     width: 24px;
     height: 24px;
     background-color: #000;
