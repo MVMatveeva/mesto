@@ -1,5 +1,5 @@
-.profile__info_edit{
-    background-image:url("/image/EditButton.svg");
+.profile__info_edit {
+    background-image: url("/image/EditButton.svg");
     width: 24px;
     height: 24px;
     background-color: #000;
@@ -7,6 +7,6 @@
     cursor: pointer;
 }
 
-.profile__info_edit:hover{
+.profile__info_edit:hover {
     opacity: .5;
 }

@@ -1,5 +1,5 @@
-.element__like{
-    background-image:url("../../../image/Group.svg");
+.element__like {
+    background-image: url("../../../image/Group.svg");
     color: #000;
     background-color: #fff;
     width: 22px;
@@ -9,6 +9,7 @@
     margin-right: 30px;
     cursor: pointer;
 }
-.element__like:hover{
+
+.element__like:hover {
     opacity: .5;
 }

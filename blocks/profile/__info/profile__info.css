@@ -1,4 +1,4 @@
-.profile__info{
+.profile__info {
     display: grid;
     grid-template-columns: 1fr 24px;
     align-items: center;
@@ -6,9 +6,10 @@
     max-width: 336px;
     min-height: 73px;
 }
+
 @media screen and (max-width:1020px) {
-    .profile__info{
+    .profile__info {
         gap: 14px 10px;
         justify-items: center;
-    }    
+    }
 }
