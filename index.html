@@ -12,79 +12,80 @@
   <div class="page">
     <header class="header">
       <img class="header__logo" src="image/logo.svg" alt="Место">
-      <img class="header__line" src="image/Line.png" alt="Белая линия">
     </header>
     <main class="content">
       <div class="profile">
         <img class="profile__avatar" src="image/image.jpg" alt="Аватар пользователя">
         <div class="profile__info">
           <h1 class="profile__info-name">Жак-Ив Кусто</h1>
-          <button class="profile__info-edit"></button>
+          <button class="profile__info-edit" type="button"></button>
           <p class="profile__info-description">Исследователь океана</p>
         </div>
-        <button class="profile__add"></button>
+        <button class="profile__add" type="button"></button>
       </div>
       <div class="elements">
         <div class="element">
           <img class="element__photo" src="image/photo(1).jpg" alt="Карачаевск">
           <div class="element__group">
-            <p class="element__text">Карачаевск</p>
-            <button class="element__like"></button>
+            <h2 class="element__text">Карачаевск</h2>
+            <button class="element__like" type="button"></button>
           </div>
         </div>
         <div class="element">
           <img class="element__photo" src="image/photo(2).jpg" alt="Гора Эльбрус">
           <div class="element__group">
-            <p class="element__text">Гора Эльбрус</p>
-            <button class="element__like"></button>
+            <h2 class="element__text">Гора Эльбрус</h2>
+            <button class="element__like" type="button"></button>
           </div>
         </div>
         <div class="element">
           <img class="element__photo" src="image/photo(3).jpg" alt="Домбай">
           <div class="element__group">
-            <p class="element__text">Домбай</p>
-            <button class="element__like"></button>
+            <h2 class="element__text">Домбай</h2>
+            <button class="element__like" type="button"></button>
           </div>
         </div>
         <div class="element">
           <img class="element__photo" src="image/photo(4).jpg" alt="Гора Эльбрус">
           <div class="element__group">
-            <p class="element__text">Гора Эльбрус</p>
-            <button class="element__like"></button>
+            <h2 class="element__text">Гора Эльбрус</h2>
+            <button class="element__like" type="button"></button>
           </div>
         </div>
         <div class="element">
           <img class="element__photo" src="image/photo(5).jpg" alt="Домбай">
           <div class="element__group">
-            <p class="element__text">Домбай</p>
-            <button class="element__like"></button>
+            <h2 class="element__text">Домбай</h2>
+            <button class="element__like" type="button"></button>
           </div>
         </div>
         <div class="element">
           <img class="element__photo" src="image/photo(6).jpg" alt="Карачаево-Черкесия">
           <div class="element__group">
-            <p class="element__text">Карачаево-Черкесия</p>
-            <button class="element__like"></button>
+            <h2 class="element__text">Карачаево-Черкесия</h2>
+            <button class="element__like" type="button"></button>
           </div>
         </div>
       </div>
       <aside class="popup">
+        <div class="popup__container">
         <form class="popup__form">
-          <button class="popup__close"></button>
+          <button class="popup__close" type="button"></button>
           <p class="popup__text">Редактировать профиль</p>
           <fieldset class="popup__fieldset">
-            <input class="popup__input popup__name" type="text" placeholder="Имя">
-            <input class="popup__input popup__description" type="text" placeholder="О себе">
+            <input class="popup__input popup__input_name" type="text" name="name" placeholder="Имя">
+            <input class="popup__input popup__input_description" type="text" name="description" placeholder="О себе">
           </fieldset>
           <button class="popup__save" type="submit">Сохранить</button>
         </form>
+      </div>
       </aside>
     </main>
     <footer class="footer">
       <p class="footer__text"> &copy; 2023 Mesto Russia</p>
     </footer>
   </div>
-  <script src="script.js"></script>
+  <script src="scripts/script.js"></script>
 </body>
 
 </html>

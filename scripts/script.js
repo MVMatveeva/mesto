@@ -1,12 +1,13 @@
-const editButtonElement = document.querySelector('.profile__info_edit');
+const editButtonElement = document.querySelector('.profile__info-edit');
 const closeButtonElement = document.querySelector('.popup__close');
 const popupElement = document.querySelector('.popup');
-const popupProfileName = document.querySelector('.popup__name');
-const popupProfileDescription = document.querySelector('.popup__description');
-const profileInfoName = document.querySelector('.profile__info_name');
-const profileInfoDescription = document.querySelector('.profile__info_description');
+const popupProfileName = document.querySelector('.popup__input_name');
+const popupProfileDescription = document.querySelector('.popup__input_description');
+const profileInfoName = document.querySelector('.profile__info-name');
+const profileInfoDescription = document.querySelector('.profile__info-description');
 const popupSaveButton = document.querySelector('.popup__save');
 const popupForm = document.querySelector('.popup__form')
+const photoLikes = document.querySelectorAll('.element__like')
 const photoLike = document.querySelector('.element__like')
 
 function handleEditClick() {
@@ -28,8 +29,3 @@ function handleFormSubmit(evt) {
   profileInfoDescription.innerText = popupProfileDescription.value;
 }
 popupForm.addEventListener('submit', handleFormSubmit)
-
-function buttonLike() {
-  photoLike.classList.toggle('element__like_active');
-}
-photoLike.addEventListener('click',buttonLike)
