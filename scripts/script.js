@@ -1,31 +1,32 @@
-const editButtonElement = document.querySelector('.profile__info-edit');
-const closeButtonElement = document.querySelector('.popup__close');
-const popupElement = document.querySelector('.popup');
-const popupProfileName = document.querySelector('.popup__input_name');
-const popupProfileDescription = document.querySelector('.popup__input_description');
-const profileInfoName = document.querySelector('.profile__info-name');
-const profileInfoDescription = document.querySelector('.profile__info-description');
-const popupSaveButton = document.querySelector('.popup__save');
-const popupForm = document.querySelector('.popup__form')
-const photoLikes = document.querySelectorAll('.element__like')
-const photoLike = document.querySelector('.element__like')
+const buttonEditElement = document.querySelector(".profile__info-edit");
+const buttonCloseElement = document.querySelector(".popup__close");
+const popupElement = document.querySelector(".popup");
+const popupProfileName = document.querySelector(".popup_input_name");
+const popupProfileDescription = document.querySelector(".popup_input_description");
+const profileInfoName = document.querySelector(".profile__info-name");
+const profileInfoDescription = document.querySelector(
+  ".profile__info-description"
+);
+const popupForm = document.querySelector(".popup__form");
 
 function handleEditClick() {
-  popupElement.classList.add('popup_opened');
-  popupProfileName.value = profileInfoName.innerText;
-  popupProfileDescription.value = profileInfoDescription.innerText;
+  popupElement.classList.add("popup_opened");
+  popupProfileName.value = profileInfoName.textContent;
+  popupProfileDescription.value = profileInfoDescription.textContent;
 }
-editButtonElement.addEventListener('click', handleEditClick);
 
 function handleCloseClick() {
-  popupElement.classList.remove('popup_opened');
+  popupElement.classList.remove("popup_opened");
 }
-closeButtonElement.addEventListener('click', handleCloseClick);
 
 function handleFormSubmit(evt) {
   evt.preventDefault();
-  popupElement.classList.remove('popup_opened')
-  profileInfoName.innerText = popupProfileName.value;
-  profileInfoDescription.innerText = popupProfileDescription.value;
+  handleCloseClick();
+  profileInfoName.textContent = popupProfileName.value;
+  profileInfoDescription.textContent = popupProfileDescription.value;
 }
-popupForm.addEventListener('submit', handleFormSubmit)
+buttonEditElement.addEventListener("click", handleEditClick);
+buttonCloseElement.addEventListener("click", handleCloseClick);
+popupForm.addEventListener("submit", handleFormSubmit);
+
+
