@@ -1,8 +1,8 @@
 const buttonEditElement = document.querySelector(".profile__info-edit");
 const buttonCloseElement = document.querySelector(".popup__close");
 const popupElement = document.querySelector(".popup");
-const popupProfileName = document.querySelector(".popup_input_name");
-const popupProfileDescription = document.querySelector(".popup_input_description");
+const popupProfileName = document.querySelector(".popup__input_edit_name");
+const popupProfileDescription = document.querySelector(".popup__input_edit_description");
 const profileInfoName = document.querySelector(".profile__info-name");
 const profileInfoDescription = document.querySelector(
   ".profile__info-description"
