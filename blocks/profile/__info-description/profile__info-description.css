@@ -12,7 +12,7 @@
     
 }
 
-@media screen and (max-width:620px) {
+@media screen and (max-width:1020px) {
     .profile__info-description {
         font-size: 14px;
         justify-self: end;
