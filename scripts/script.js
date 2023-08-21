@@ -17,7 +17,8 @@ const popupFormNewCard = document.querySelector("#new-card");
 const popupOpenImage = document.querySelector("#open-image");
 const popupImage = document.querySelector(".popup__link");
 const popupImageName = document.querySelector(".popup__name");
-const buttonCloseImage = document.querySelector("#image-close")
+const buttonCloseImage = document.querySelector("#image-close");
+const popupEdit = document.querySelector("#edit-profile");
 
 const initialCards = [
   {
@@ -46,27 +47,36 @@ const initialCards = [
   }
 ]; 
 
-function handleEditClick() {
-  popupElement.classList.add("popup_opened");
+function openPopup(popup){
+  popup.classList.add("popup_opened");
+}
+
+function closePopup(popup){
+  popup.classList.remove("popup_opened");
+}
+
+function handleEditClick (){
+  openPopup(popupEdit);
   popupProfileName.value = profileInfoName.textContent;
   popupProfileDescription.value = profileInfoDescription.textContent;
 }
 
 function handleCloseClick() {
-  popupElement.classList.remove("popup_opened");
+  closePopup(popupEdit);
 }
 
+
 function handleAddCardClick() {
-  popupAddCard.classList.add("popup_opened");
+ openPopup(popupAddCard);
 }
 
 
 function handleCloseAddCardClick (){
-  popupAddCard.classList.remove("popup_opened");
+  closePopup(popupAddCard);
 }
 
 function handleCloseImage(){
-  popupOpenImage.classList.remove("popup_opened");
+  closePopup (popupOpenImage);
 }
 
 function handleFormSubmit(evt) {
@@ -86,6 +96,8 @@ cardElement.querySelector(".element__photo").src = link;
 cardElement.querySelector(".element__photo").alt = name;
 cardElement.querySelector(".element__text").textContent = name;
 
+document.querySelector("#new-card").reset();
+
 const deleteButtonCard = cardElement.querySelector(".element__trash");
 deleteButtonCard.addEventListener("click",()=>{
 cardElement.remove();
@@ -97,7 +109,7 @@ likeButtonCard.addEventListener("click",()=>{
 })
 
 function handleOpenImage () {
-  popupOpenImage.classList.add("popup_opened");
+  openPopup(popupOpenImage);
   
   popupImage.src = link;
   popupImage.alt = name;
