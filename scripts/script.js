@@ -96,8 +96,6 @@ cardElement.querySelector(".element__photo").src = link;
 cardElement.querySelector(".element__photo").alt = name;
 cardElement.querySelector(".element__text").textContent = name;
 
-document.querySelector("#new-card").reset();
-
 const deleteButtonCard = cardElement.querySelector(".element__trash");
 deleteButtonCard.addEventListener("click",()=>{
 cardElement.remove();
@@ -134,6 +132,8 @@ handleCloseAddCardClick();
 
 const link = inputCardLink.value;
 const name = inputCardName.value;
+
+popupFormNewCard.reset();
 
 const cardElement = createCard({link, name});
 elementsList.prepend(cardElement);
