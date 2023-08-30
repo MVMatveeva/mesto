@@ -86,7 +86,41 @@ function handleFormSubmit(evt) {
   profileInfoDescription.textContent = popupProfileDescription.value;
 }
     
+document.addEventListener("keydown", function(evt){
+  if(evt.key === "Escape"){
+    closePopup(popupAddCard)
+  }
+})
 
+document.addEventListener("keydown", function(evt){
+  if(evt.key === "Escape"){
+    closePopup(popupEdit)
+  }
+})
+
+document.addEventListener("keydown", function(evt){
+  if(evt.key === "Escape"){
+    closePopup(popupOpenImage)
+  }
+})
+
+popupAddCard.addEventListener("click", (evt) => {
+  if(evt.currentTarget === evt.target){
+    closePopup(popupAddCard)
+  }
+})
+
+popupEdit.addEventListener("click", (evt) => {
+  if(evt.currentTarget === evt.target){
+    closePopup(popupEdit)
+  }
+})
+
+popupOpenImage.addEventListener("click", (evt) => {
+  if(evt.currentTarget === evt.target){
+    closePopup(popupOpenImage)
+  }
+})
 
 const createCard = ({link, name}) => {
 const clone = templateElement.content.cloneNode(true);
@@ -146,4 +180,4 @@ popupForm.addEventListener("submit", handleFormSubmit);
 buttonAddCard.addEventListener("click", handleAddCardClick);
 buttonCloseAdd.addEventListener("click", handleCloseAddCardClick);
 popupFormNewCard.addEventListener("submit", handleAddSubmit);
-buttonCloseImage.addEventListener("click", handleCloseImage)
+buttonCloseImage.addEventListener("click", handleCloseImage);
