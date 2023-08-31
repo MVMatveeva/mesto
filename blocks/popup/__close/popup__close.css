@@ -2,7 +2,7 @@
     background-image: url(../../../image/CloseIcon.svg);
     width: 32px;
     height: 32px;
-    background-color: rgba( 0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
     border: 0;
     cursor: pointer;
     margin-left: auto;
@@ -25,4 +25,9 @@
         margin-top: -36px;
         padding: 0;
     }
+}
+
+#image-close {
+    margin-top: 0;
+    padding-bottom: 36px;
 }

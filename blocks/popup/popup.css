@@ -12,3 +12,7 @@
     justify-content: center;
     align-items: center;
 }
+
+.popup:last-child{
+    background-color: rgba(0, 0, 0, 0.9);
+}
