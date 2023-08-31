@@ -27,7 +27,9 @@
     }
 }
 
-#image-close {
-    margin-top: 0;
-    padding-bottom: 36px;
+@media screen and (max-width:620px) {
+    #image-close {
+        margin-top: 0;
+        padding-bottom: 36px;
+    }
 }
