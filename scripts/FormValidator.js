@@ -58,14 +58,12 @@ export class FormValidator {
     });
     this._formElement.addEventListener("submit", (evt) => {
       evt.preventDefault();
-      toggleButton(this._submitButtonElement, this._formElement.checkValidity());
+      this._toggleButton(this._formElement.checkValidity());
     });
   }
   
   enableValidation() {
-      this._formsList.forEach(() => {
       this._setEvenetListener();
-    })
   } 
 
 }

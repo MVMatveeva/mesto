@@ -1,16 +1,12 @@
 export class Card {
   constructor(
     data,
-    handleClickDelete,
-    handleClickLike,
     handleOpenPopupImage,
     templateSelector
   ) {
     this._name = data.name;
     this._link = data.link;
     this._templateSelector = templateSelector;
-    this._handleClickDelete = handleClickDelete;
-    this._handleClickLike = handleClickLike;
     this._handleOpenPopupImage = handleOpenPopupImage;
   }
 
@@ -32,6 +28,14 @@ export class Card {
     this._setEventListener();
 
     return this._element;
+  }
+
+  _handleClickDelete(cardElement) {
+    cardElement.remove();
+  }
+  
+  _handleClickLike(likeButtonCard) {
+    likeButtonCard.classList.toggle("element__like_active");
   }
 
   _setEventListener() {
