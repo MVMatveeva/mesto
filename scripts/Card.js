@@ -34,21 +34,19 @@ export class Card {
     cardElement.remove();
   }
   
-  _handleClickLike(likeButtonCard) {
-    likeButtonCard.classList.toggle("element__like_active");
+  _handleClickLike() {
+    this._element.querySelector(".element__like").classList.toggle("element__like_active");
   }
 
   _setEventListener() {
-    const likeButtonCard = this._element.querySelector(".element__like");
-
-    this._element
+     this._element
       .querySelector(".element__trash")
       .addEventListener("click", () => {
         this._handleClickDelete(this._element);
       });
 
-    likeButtonCard.addEventListener("click", () => {
-      this._handleClickLike(likeButtonCard);
+      this._element.querySelector(".element__like").addEventListener("click", () => {
+      this._handleClickLike();
     });
 
     this._element
