@@ -30,22 +30,24 @@ export class Card {
     return this._element;
   }
 
-  _handleClickDelete(cardElement) {
-    cardElement.remove();
+  _handleClickDelete() {
+    this._element.remove();
   }
   
   _handleClickLike() {
-    this._element.querySelector(".element__like").classList.toggle("element__like_active");
+    this._likeButton.classList.toggle("element__like_active");
   }
 
   _setEventListener() {
+    this._likeButton = this._element.querySelector(".element__like"); 
+
      this._element
       .querySelector(".element__trash")
       .addEventListener("click", () => {
         this._handleClickDelete(this._element);
       });
 
-      this._element.querySelector(".element__like").addEventListener("click", () => {
+      this._likeButton.addEventListener("click", () => {
       this._handleClickLike();
     });
 
