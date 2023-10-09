@@ -13,7 +13,6 @@ export default class FormValidator {
     this._submitButtonElement = this._formElement.querySelector(
       this._submitButtonSelector
     );
-    this._formsList = Array.from(document.querySelectorAll(this._formSelector));
   }
 
  _showError(inputElement) {
@@ -49,16 +48,17 @@ export default class FormValidator {
   
   _setEvenetListener() {
        this._toggleButton(this._formElement.checkValidity());
-  
+     
     this._inputList.forEach( (inputElement) => {
       inputElement.addEventListener("input", () => {
         this._toggleButton(this._formElement.checkValidity());
         this._checkInputValidity(inputElement);
       });
     });
-    this._formElement.addEventListener("submit", (evt) => {
+    this._formElement.addEventListener("reset", (evt) => {
       evt.preventDefault();
       this._toggleButton(this._formElement.checkValidity());
+      this._toggleButton(false);
     });
   }
   

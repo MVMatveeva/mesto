@@ -1,17 +1,17 @@
 const path = require("path"); // подключаем path к конфигу вебпак
 const HtmlWebpackPlugin = require("html-webpack-plugin"); // подключите плагин
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // подключили плагин 
+const { CleanWebpackPlugin } = require("clean-webpack-plugin"); // подключили плагин
 
 module.exports = {
-  entry: { main: "./src/index.js" },
+  entry: { main: "./src/pages/index.js" },
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "main.js",
     publicPath: "",
   },
   devtool: "source-map",
-  mode: 'development', // добавили режим разработчика
+  mode: "development", // добавили режим разработчика
   devServer: {
     static: path.resolve(__dirname, "./dist"), // путь, куда "смотрит" режим разработчика
     compress: true, // это ускорит загрузку в режиме разработки
@@ -20,18 +20,28 @@ module.exports = {
   },
   module: {
     rules: [
-        {
-            // регулярное выражение, которое ищет все js файлы
-            test: /\.js$/,
-            // при обработке этих файлов нужно использовать babel-loader
-            use: 'babel-loader',
-            // исключает папку node_modules, файлы в ней обрабатывать не нужно
-            exclude: '/node_modules/'
-          },
-        {        
-        test: /\.(png|svg|jpg|gif|woff(2)?|eot|ttf|otf)$/,
-        type: 'asset/resource'
-    },
+      {
+        // регулярное выражение, которое ищет все js файлы
+        test: /\.js$/,
+        // при обработке этих файлов нужно использовать babel-loader
+        use: "babel-loader",
+        // исключает папку node_modules, файлы в ней обрабатывать не нужно
+        exclude: "/node_modules/",
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "images/[name].[hash][ext]",
+        },
+      },
+      {
+        test: /\.(woff(2)?|eot|ttf|otf)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "fonts/[name].[hash][ext]",
+        },
+      },
       {
         test: /\.css$/,
         use: [

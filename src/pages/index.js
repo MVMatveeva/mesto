@@ -1,6 +1,6 @@
-import "./pages/index.css";
-import Card from "../src/components/Card.js";
-import FormValidator from "../src/components/FormValidator.js";
+import "./index.css";
+import Card from "../components/Card.js";
+import FormValidator from "../components/FormValidator.js";
 import {
   config,
   initialCards,
@@ -12,11 +12,11 @@ import {
   buttonAddCard,
   inputCardName,
   inputCardLink,
-} from "../src/scripts/utils.js";
-import PopupWithImage from "../src/components/PopupWithImage.js";
-import PopupWithForm from "../src/components/PopupWithForm.js";
-import UserInfo from "../src/components/UserInfo.js";
-import Section from "../src/components/Section.js";
+} from "../scripts/utils.js";
+import PopupWithImage from "../components/PopupWithImage.js";
+import PopupWithForm from "../components/PopupWithForm.js";
+import UserInfo from "../components/UserInfo.js";
+import Section from "../components/Section.js";
 
 function createNewCard(data) {
   const card = new Card(data, ".template__element", handleCardClick);

@@ -10,11 +10,11 @@
 <body class="body">
   <div class="page">
     <header class="header">
-      <img class="header__logo" src="<%=require("./image/logo.svg")%>" alt="Место">
+      <img class="header__logo" src="<%=require('./image/logo.svg')%>" alt="Место">
     </header>
     <main class="content">
       <section class="profile">
-        <img class="profile__avatar" src="<%=require("./image/image.jpg")%>" alt="Аватар пользователя">
+        <img class="profile__avatar" src="<%=require('./image/image.jpg')%>" alt="Аватар пользователя">
         <div class="profile__info">
           <h1 class="profile__info-name">Жак-Ив Кусто</h1>
           <button class="profile__info-edit" type="button"></button>
@@ -61,7 +61,7 @@
       <div class="popup" id="open-image">
         <div class="popup__image">
           <button class="popup__close" id="image-close" type="button"></button>
-          <img class="popup__link" src=".." alt="..">
+          <img class="popup__link" src="#" alt="">
           <h2 class="popup__name"> </h2>
         </div>
       </div>
@@ -74,7 +74,7 @@
   <template class="template__element" id="template-element">
     <div class="element">
       <img class="element__photo" src="." alt=".">
-      <img class="element__trash" src="<%=require("./image/Trash.svg")%>" alt="Удалить">
+      <img class="element__trash" src="<%=require('./image/Trash.svg')%>" alt="Удалить">
       <div class="element__group">
         <h2 class="element__text"> </h2>
         <button class="element__like" type="button"></button>
