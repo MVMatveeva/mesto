@@ -55,12 +55,10 @@ export default class FormValidator {
         this._checkInputValidity(inputElement);
       });
     });
-    this._formElement.addEventListener("reset", (evt) => {
-      evt.preventDefault();
-      this._toggleButton(this._formElement.checkValidity());
+    this._formElement.addEventListener("reset", () => {
       this._toggleButton(false);
-    });
-  }
+  })
+}
   
   enableValidation() {
       this._setEvenetListener();
