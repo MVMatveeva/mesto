@@ -152,7 +152,7 @@ const popupAddCard = new PopupWithForm({
   popupSelector: "#add-card",
   handleSubmitForm: (data) => {
     popupAddCard.loading(true);
-    api.newCard(data)
+    api.newCard({ name:data.place, link:data.link })
       .then((data) => {
         section.addNewCard(createNewCard(data));
         popupAddCard.close();
@@ -172,7 +172,7 @@ const popupEditAvatar = new PopupWithForm({
   handleSubmitForm: (formData) => {
     popupEditAvatar.loading(true);
     api
-      .editAvatar(formData)
+      .editAvatar({avatar: formData.link})
       .then((formData) => {
         profileAvatar.src = formData.avatar;
         popupEditAvatar.close();

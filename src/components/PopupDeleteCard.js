@@ -6,8 +6,8 @@ export default class PopupDeleteCard extends Popup{
         this._popupFormDelete = this._popup.querySelector(".popup__form");
     }
 
-    submitDeleteCard(removing){
-        this._submitDelete = removing;
+    submitDeleteCard(handleSubmit){
+        this._submitDelete = handleSubmit;
     }
 
     setEventListeners(){
