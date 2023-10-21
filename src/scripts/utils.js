@@ -6,34 +6,6 @@ const config = {
   inputErrorClass: "popup__input_type_error",
   errorClass: "popup__error_visible",
 };
-
-const initialCards = [
-  {
-    name: "Архыз",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg",
-  },
-  {
-    name: "Челябинская область",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg",
-  },
-  {
-    name: "Иваново",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg",
-  },
-  {
-    name: "Камчатка",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg",
-  },
-  {
-    name: "Холмогорский район",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg",
-  },
-  {
-    name: "Байкал",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg",
-  },
-];
-
 const buttonEditElement = document.querySelector(".profile__info-edit");
 const popupProfileName = document.querySelector(".popup__input_edit_name");
 const popupProfileDescription = document.querySelector(
@@ -42,18 +14,19 @@ const popupProfileDescription = document.querySelector(
 const popupFormNewCard = document.querySelector("#new-card");
 const popupFormEditProfile = document.querySelector("#form-edit-profile");
 const buttonAddCard = document.querySelector(".profile__add");
-const inputCardName = document.querySelector(".popup__input_add_name");
-const inputCardLink = document.querySelector(".popup__input_add_link");
+const buttonEditAvatar = document.querySelector(".profile__avatar-button");
+const profileAvatar = document.querySelector(".profile__avatar");
+const formEditAvatar = document.querySelector("#change-photo");
 
 export {
   config,
-  initialCards,
   buttonEditElement,
   popupProfileName,
   popupProfileDescription,
   popupFormNewCard,
   popupFormEditProfile,
   buttonAddCard,
-  inputCardName,
-  inputCardLink,
+  buttonEditAvatar,
+  profileAvatar,
+  formEditAvatar,
 };
