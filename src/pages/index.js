@@ -172,7 +172,7 @@ const popupEditAvatar = new PopupWithForm({
   handleSubmitForm: (formData) => {
     popupEditAvatar.loading(true);
     api
-      .editAvatar(formData.avatar)
+      .editAvatar(formData)
       .then((formData) => {
         profileAvatar.src = formData.avatar;
         popupEditAvatar.close();
